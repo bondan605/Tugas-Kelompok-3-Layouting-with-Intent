@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Todo List App</string>
+    <string name="welcome_onb">Welcome Onboard!</string>
+    <string name="lets_help">Let\'s help you meet up your task</string>
 </resources>
