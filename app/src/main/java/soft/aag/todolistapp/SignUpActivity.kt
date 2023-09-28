@@ -10,7 +10,14 @@ import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.Toast
+import io.github.anderscheow.validator.Validator
+import io.github.anderscheow.validator.constant.Mode
+import io.github.anderscheow.validator.validator
 import soft.aag.todolistapp.common.createClickableText
+import soft.aag.todolistapp.common.emailValid
+import soft.aag.todolistapp.common.generalValid
+import soft.aag.todolistapp.common.passwordValid
+import soft.aag.todolistapp.common.toast
 import soft.aag.todolistapp.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -25,12 +32,32 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun bindView() {
         binding.btnSignUp.setOnClickListener {
-            Toast.makeText(this, "Sign Up", Toast.LENGTH_LONG).show()
+            bindValidation()
         }
 
         binding.txtSignIn.text = "Already have an account ? Sign In".createClickableText("Sign In") {
-            Toast.makeText(this, "Sign In", Toast.LENGTH_LONG).show()
+            this.toast("Sign In")
         }
         binding.txtSignIn.movementMethod = LinkMovementMethod.getInstance()
+    }
+
+    private fun bindValidation() {
+        validator(this) {
+            mode = Mode.SINGLE
+            listener = setValidation()
+            validate(
+                generalValid(binding.textInputLayout),
+                emailValid(binding.textInputLayout2),
+                passwordValid(binding.textInputLayout3),
+                passwordValid(binding.textInputLayout4)
+            )
+        }
+    }
+
+    private fun setValidation() = object : Validator.OnValidateListener {
+        override fun onValidateFailed(errors: List<String>) {}
+        override fun onValidateSuccess(values: List<String>) {
+            this@SignUpActivity.toast("Sign Up")
+        }
     }
 }
