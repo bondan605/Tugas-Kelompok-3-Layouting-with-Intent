@@ -4,6 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDEDED"
     tools:context=".Login">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_img_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/img_circle_design" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_back"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:src="@drawable/arrow_circle_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="21dp"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ilustration"
+        android:layout_width="211dp"
+        android:layout_height="226dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/img_login"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
