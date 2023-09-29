@@ -36,6 +36,10 @@ class SignUpActivity : AppCompatActivity() {
             bindValidation()
         }
 
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
+        }
+
         binding.txtSignIn.text = "Already have an account ? Sign In".createClickableText("Sign In") {
             this.toast("Sign In")
         }
