@@ -16,6 +16,15 @@
             android:name=".Dashboard5"
             android:exported="false" />
         <activity
+            android:name=".AddList"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
