@@ -1,5 +1,6 @@
 package soft.aag.todolistapp
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -41,7 +42,8 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         binding.txtSignIn.text = "Already have an account ? Sign In".createClickableText("Sign In") {
-            this.toast("Sign In")
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
         binding.txtSignIn.movementMethod = LinkMovementMethod.getInstance()
     }
@@ -62,7 +64,7 @@ class SignUpActivity : AppCompatActivity() {
     private fun setValidation() = object : Validator.OnValidateListener {
         override fun onValidateFailed(errors: List<String>) {}
         override fun onValidateSuccess(values: List<String>) {
-            this@SignUpActivity.toast("Sign Up")
+            this@SignUpActivity.toast("Sing Up")
         }
     }
 }
