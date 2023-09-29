@@ -16,6 +16,14 @@ class Login : AppCompatActivity() {
             val intent = Intent(this, AddList::class.java)
             startActivity(intent)
         }
+        binding.forgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
+        binding.signup.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
         binding.buttonBack.setOnClickListener {
             onBackPressed()
         }
