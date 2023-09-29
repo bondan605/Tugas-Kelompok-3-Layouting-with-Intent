@@ -13,6 +13,7 @@ import android.widget.Toast
 import io.github.anderscheow.validator.Validator
 import io.github.anderscheow.validator.constant.Mode
 import io.github.anderscheow.validator.validator
+import soft.aag.todolistapp.common.confirmPasswordValid
 import soft.aag.todolistapp.common.createClickableText
 import soft.aag.todolistapp.common.emailValid
 import soft.aag.todolistapp.common.generalValid
@@ -49,7 +50,7 @@ class SignUpActivity : AppCompatActivity() {
                 generalValid(binding.textInputLayout),
                 emailValid(binding.textInputLayout2),
                 passwordValid(binding.textInputLayout3),
-                passwordValid(binding.textInputLayout4)
+                confirmPasswordValid(binding.textInputLayout4, binding.txtConfirmPassword)
             )
         }
     }
