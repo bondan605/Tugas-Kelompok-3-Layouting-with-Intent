@@ -1,10 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Todo List App</string>
-    <string name="welcome_onb">Welcome Onboard!</string>
-    <string name="lets_help">Let\'s help you meet up your task</string>
-    <string name="get_started_title">Get things done with TODO</string>
-    <string name="get_started_desc">TODO is an application designed to help users organize and track tasks or activities that need to be completed</string>
-    <string name="get_started_btn">Get Started</string>
     <string name="txt_not_null">Tidak boleh NULL</string>
     <string name="txt_not_empty">Tidak boleh kosong</string>
     <string name="txt_not_email">Email tidak valid</string>
