@@ -50,7 +50,7 @@ class SignUpActivity : AppCompatActivity() {
                 generalValid(binding.textInputLayout),
                 emailValid(binding.textInputLayout2),
                 passwordValid(binding.textInputLayout3),
-                confirmPasswordValid(binding.textInputLayout4, binding.txtConfirmPassword)
+                confirmPasswordValid(binding.textInputLayout4, binding.txtPassword)
             )
         }
     }
