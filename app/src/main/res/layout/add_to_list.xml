@@ -29,6 +29,16 @@
         app:layout_constraintBottom_toTopOf="@id/app_name"
         />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/button_back"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="55dp"
+                android:src="@drawable/arrow_circle_left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
@@ -153,6 +163,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Add To List"
         style="@style/ButtonPrimary"
         app:layout_constraintTop_toBottomOf="@id/input_todo3"
